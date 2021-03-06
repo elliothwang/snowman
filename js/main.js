@@ -47,10 +47,11 @@ let images = {
   let word, board, winner, movesLeft;
   
   // ===== cached element references ===== //
-  let snowmanImg = document.getElementById("img");
-  let wordEl = document.getElementById("word");
+  let snowmanImg = document.querySelector("#img");
+  let movesLeftEl = document.querySelector("#moves")
+  let wordEl = document.querySelector("#word");
   let alphaBoardEls = [...document.querySelectorAll("#alphabet-board > div")];
-  let replayButton = document.getElementById("reset");
+  let replayButton = document.querySelector("#reset");
   
   // ===== event listeners ===== //
   replayButton.addEventListener("click", init);
@@ -63,14 +64,17 @@ let images = {
     // getItem "win streak #" from local storage object
 
     // reassign winner to null;
+    winner = null;
 
     // set amount of moves left to 6 => movesLeft = 6;
     movesLeft = 6;
+    movesLeftEl.innerText = `Moves Left: ${movesLeft}`;
 
     // // reset snowman picture to first stage => snowmaImg.style.backgroundImage = images.0;
-    // snowmanImg.style.backgroundImage = images[6];
+    snowmanImg.style.backgroundImage = images[6];
 
-    // reset opacity of alphabet-board divs => alphaBoardEls.style.opacity = 0;
+    // reset opacity of alphabet-board divs => alphaBoardEls.style.opacity = 1;
+    alphaBoardEls.forEach(div => div.style.opacity = 1);
 
     // clear word section
     wordEl.innerHTML = "";
@@ -94,11 +98,6 @@ let images = {
     }
     console.log(word);
   };
-
-
-  function addLetter () {
-
-  }
   
   function handleClick(evt) {
     console.log(`${evt.target.id}`);
