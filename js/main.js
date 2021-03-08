@@ -30,7 +30,8 @@
 // ===== constants ===== //
 // intialize gameWords to array of difficult spaceman words
 let gameWords = ['abruptly','absurd','abyss','affix','askew','avenue','awkward','axiom','azure','bagpipes','bandwagon','banjo','bayou','beekeeper','bikini','blitz','blizzard','boggle','bookworm','boxcar','boxful','buckaroo','buffalo','buffoon','buxom','buzzard','buzzing','buzzwords','caliph','cobweb','cockiness','croquet','crypt','curacao','cycle','daiquiri','dirndl','disavow','dizzying','duplex','dwarves','embezzle','equip','espionage','euouae','exodus','faking','fishhook','fixable','fjord','flapjack','flopping','fluffiness','flyby','foxglove','frazzled','frizzled','fuchsia','funny','gabby','galaxy','galvanize','gazebo','giaour','gizmo','glowworm','glyph','gnarly','gnostic','gossip','grogginess','haiku','haphazard','hyphen','iatrogenic','icebox','injury','ivory','ivy','jackpot','jaundice','jawbreaker','jaywalk','jazziest','jazzy','jelly','jigsaw','jinx','jiujitsu','jockey','jogging','joking','jovial','joyful','juicy','jukebox','jumbo','kayak','kazoo','keyhole','khaki','kilobyte','kiosk','kitsch','kiwifruit','klutz','knapsack','larynx','lengths','lucky','luxury','lymph','marquis','matrix','megahertz','microwave','mnemonic','mystify','naphtha','nightclub','nowadays','numbskull','nymph','onyx','ovary','oxidize','oxygen','pajama','peekaboo','phlegm','pixel','pizazz','pneumonia','polka','pshaw','psyche','puppy','puzzling','quartz','queue','quips','quixotic','quiz','quizzes','quorum','razzmatazz','rhubarb','rhythm','rickshaw','schnapps','scratch','shiv','snazzy','sphinx','spritz','squawk','staff','strength','strengths','stretch','stronghold','stymied','subway','swivel','syndrome','thriftless','thumbscrew','topaz','transcript','transgress','transplant','triphthong','twelfth','twelfths','unknown','unworthy','unzip','uptown','vaporize','vixen','vodka','voodoo','vortex','voyeurism','walkway','waltz','wave','wavy','waxy','wellspring','wheezy','whiskey','whizzing','whomever','wimpy','witchcraft','wizard','woozy','wristwatch','wyvern','xylophone','yachtsman','yippee','yoked','youthful','yummy','zephyr','zigzag','zigzagging','zilch','zipper','zodiac','zombie'];
-
+// initialize var alphabet to array of alphabet letters
+var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 // intialize images to object; keys(movesLeft) : images(stages) of snowman 
 let images = {
     0: "url('data:image/png;base64,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')",
@@ -44,42 +45,44 @@ let images = {
 };
 
   // ===== app's state ===== //
-  let word, board, winner, movesLeft;
-  
+  let word, wordPlaceHolder, winner, movesLeft;
+
+  // initialize var guesses to empty array
+  let guesses = [];
+
+
   // ===== cached element references ===== //
   let snowmanImg = document.querySelector("#img");
-  let movesLeftEl = document.querySelector("#moves")
+  let movesLeftEl = document.querySelector("#moves");
   let wordEl = document.querySelector("#word");
-  let alphaBoardEls = [...document.querySelectorAll("#alphabet-board > div")];
+  let keyboard = [...document.querySelectorAll("#alphabet-board > *")];
   let replayButton = document.querySelector("#reset");
-  
+
   // ===== event listeners ===== //
   replayButton.addEventListener("click", init);
-  alphaBoardEls.forEach(div => div.addEventListener("click", handleClick));
+  keyboard.forEach(div => div.addEventListener("click", handleClick));
+
+  init ();
   
   // ===== functions ===== //
-
   function init () {
-    
-    // getItem "win streak #" from local storage object
-
     // reassign winner to null;
     winner = null;
-
-    // set amount of moves left to 6 => movesLeft = 6;
+    // reassign amount of moves left to & display movesLeft
     movesLeft = 6;
     movesLeftEl.innerText = `Moves Left: ${movesLeft}`;
 
-    // // reset snowman picture to first stage => snowmaImg.style.backgroundImage = images.0;
-    snowmanImg.style.backgroundImage = images[6];
+    // // reset snowman picture to first stage => snowmanImg.style.backgroundImage = images.0;
+    snowmanImg.style.backgroundImage = images[movesLeft];
 
-    // reset opacity of alphabet-board divs => alphaBoardEls.style.opacity = 1;
-    alphaBoardEls.forEach(div => div.style.opacity = 1);
+    // reassign word to empty string
+    word = "";
 
-    // clear word section
-    wordEl.innerHTML = "";
+    // reset guesses array
+    guesses = [];
 
-    // set button to hidden =>  replayButton.style.visibility = "hidden";
+    // set replayButton's visibility to hidden
+    replayButton.style.visibility = "hidden";
 
     // invoke selectWord function
     selectWord();
@@ -91,48 +94,35 @@ let images = {
   function selectWord() {
     // randomly select element from gameWords Array & assign it to wordEl.innerText
     word = gameWords[Math.floor(Math.random() * gameWords.length)];
-
-    // iterate through letters of word, create div for each letter, assign innerText to letter at that index
-    for (let i = 0; i < word.length; i++) {
-      wordEl.innerHTML += `<div class="item">${word[i]}</div>`;
-    }
     console.log(word);
   };
   
   function handleClick(evt) {
-    console.log(`${evt.target.id}`);
-
-    // invoke hitOrMiss function
-    hitOrMiss();
-
-    // invoke checkForWin functon
-    checkForWin();
-
-    // invoke render function
-    render();
-  }
-  
-  function render() {
-  
-  }
-
-  function hitOrMiss() {
-    // iterate through wordEl.innerText string
-
-        // if clicked on div's id === wordEl.letter, show visibility @ that letter's index
-          // @ wordEl.innerText[letter].style.opacity = 1;
-  }
-  
-  function checkForWin() {
-    // if movesLeft = truthy
-    if (movesLeft) {
-
+    console.log(evt.target)
+    // test truthiness of evt.target.id within word using indexOf method
+    if (word.indexOf(evt.target.id) >= 0) {
+      // invoke render function
+      render();
     }
+      else if (word.indexOf(evt.target.id) === -1) {
+        // decrement movesLeft
+        movesLeft--;
+        movesLeftEl.innerText = `Moves Left: ${movesLeft}`;
 
-    // else 
-    else {
+        // reassign image to images[movesLeft];
+        snowmanImg.style.backgroundImage = images[movesLeft];
+      }
+
+    // test evt.target.id truthiness within guesses array, push into guesses array
+    if (guesses.indexOf(evt.target.id) === -1) {
+      guesses.push(evt.target.id);
     }
+  };
+
+  function render () {
 
   }
-  
-  
+
+  function checkForWinOrLoss () {
+
+  }
