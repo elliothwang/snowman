@@ -42,9 +42,10 @@ header {
 #img {
     background-size: cover;
     background-position: center;
-    border: 0.3vmin solid black;
-    padding: 20%;
+    height: 50vmin;
+    width: 30vmin;
     margin: 4vmin;
+    border: 0.1vmin solid black;
 }
 
 #word {
