@@ -82,7 +82,7 @@ let images = {
     guesses = [];
 
     // set replayButton's visibility to hidden
-    // replayButton.style.visibility = "hidden";
+    replayButton.style.visibility = "hidden";
 
     // invoke selectWord function
     selectWord();
@@ -94,41 +94,32 @@ let images = {
   function selectWord() {
     // randomly select element from gameWords Array & assign it to wordEl.innerText
     word = gameWords[Math.floor(Math.random() * gameWords.length)];
-    console.log(word);
   };
   
   function handleClick(evt) {
-    console.log(evt.target)
+  // test evt.target.id truthiness within guesses array, push into guesses array
+    if (guesses.indexOf(evt.target.id) === -1) {
+      guesses.push(evt.target.id);
+    }
     // test truthiness of evt.target.id within word using indexOf method
     if (word.indexOf(evt.target.id) >= 0) {
-      console.log("yes!");
-      
       // set background color of evt.target.id's button to red
       document.getElementById(evt.target.id).style.backgroundColor = "#1db36d";
-
       // invoke render function
       render();
-      
     }
       else if (word.indexOf(evt.target.id) === -1) {
-        console.log("no!")
-
       // set background color of evt.target.id's button to red
       document.getElementById(evt.target.id).style.backgroundColor = "#bd4844";
+      // set opacity to 0.8
       document.getElementById(evt.target.id).style.opacity = 0.8;
-
         // decrement movesLeft
         movesLeft--;
         movesLeftEl.innerText = `Moves Left: ${movesLeft}`;
-
         // reassign image to images[movesLeft];
         snowmanImg.style.backgroundImage = images[movesLeft];
       }
 
-    // test evt.target.id truthiness within guesses array, push into guesses array
-    if (guesses.indexOf(evt.target.id) === -1) {
-      guesses.push(evt.target.id);
-    }
       // disable evt.target.id's button, disable transform & cursor
       document.getElementById(evt.target.id).disabled = true;
       document.getElementById(evt.target.id).style.transform = "none";
@@ -139,7 +130,6 @@ let images = {
     checkForWinOrLoss();
   };
 
-  
   function render() {
     // create new array to be wordPlaceHolder
     let wordPlaceHolder = [];
@@ -153,21 +143,24 @@ let images = {
   
     // assign #word's html to var wordPlaceHolder
     wordEl.innerHTML = wordPlaceHolder.join("");
+
+    console.log(wordEl);
+      console.log(wordPlaceHolder);
+      console.log(word);
   };
   
   function checkForWinOrLoss() {
     // if movesLeft > 0 && wordPlaceholder = word, diplay win message
-    if (movesLeft > 0 && wordPlaceHolder === word) {
+    if (movesLeft > 0 && wordEl.innerHTML === word) {
+    
       wordEl.innerHTML = "You saved the snowman!";
 
       // set reset button to visible =>  replayButton.style.visibility = "visible";
       replayButton.style.visibilty = "visible";
     }
-
     // if movesLeft = 0, display loss message
     if (movesLeft === 0) {
       wordEl.innerHTML = "The snowman melted!";
-
       // set reset button to visible =>  replayButton.style.visibility = "visible";
       replayButton.style.visibilty = "visible";
     }

@@ -49,16 +49,9 @@ header {
 
 #word {
     font-size: 7vmin;
+    font-family: 'Akaya Telivigala', cursive;
     letter-spacing: 2.5vmin;
     margin: -4vmin 0 4vmin 0;
-}
-
-#reset {
-    font-size: 1.5vmin;
-    padding: 0.5vmin 3vmin 0.5vmin 3vmin;
-    margin: 3vmin 0 0 0;
-    background-color: bisque;
-    border-color: 0.2vmin solid bisque;
 }
 
 #alphabet-board > * {
@@ -78,4 +71,19 @@ header {
     cursor: pointer;
     background-color: white;
     color: slategray;
+}
+
+#reset {
+    font-size: 1.5vmin;
+    font-family: 'Fascinate', cursive;
+    padding: 0.5vmin 4vmin 0.5vmin 4vmin;
+    margin: 3vmin 0 0 0;
+    background-color: bisque;
+    border-color: 0.2vmin solid bisque;
+}
+
+#reset:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    background-color: white;
 }
