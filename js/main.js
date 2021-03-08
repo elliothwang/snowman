@@ -82,7 +82,7 @@ let images = {
     guesses = [];
 
     // set replayButton's visibility to hidden
-    replayButton.style.visibility = "hidden";
+    // replayButton.style.visibility = "hidden";
 
     // invoke selectWord function
     selectWord();
@@ -101,10 +101,21 @@ let images = {
     console.log(evt.target)
     // test truthiness of evt.target.id within word using indexOf method
     if (word.indexOf(evt.target.id) >= 0) {
+      console.log("yes!");
+      
+      // // set background color of evt.target.id's button to red
+      // document.getElementById(evt.target.id).style.backgroundColor = "green";
+
       // invoke render function
       render();
+      
     }
       else if (word.indexOf(evt.target.id) === -1) {
+        console.log("no!")
+
+      // set background color of evt.target.id's button to red
+      // document.getElementById(evt.target.id).style.backgroundColor = "green";
+
         // decrement movesLeft
         movesLeft--;
         movesLeftEl.innerText = `Moves Left: ${movesLeft}`;
@@ -117,12 +128,43 @@ let images = {
     if (guesses.indexOf(evt.target.id) === -1) {
       guesses.push(evt.target.id);
     }
+      // disable evt.target.id's button
+      document.getElementById(evt.target.id).disabled = true;
+
+    // invoke CheckForWinOrLoss function
+    checkForWinOrLoss();
   };
 
-  function render () {
+  
+  function render() {
+    // create new array to be wordPlaceHolder
+    let wordPlaceHolder = [];
+      // iterate through word with for loop
+      for (letter of word.split("")) {
+        if (guesses.indexOf(letter) >= 0) {
+          wordPlaceHolder.push(letter);
+        }
+        else wordPlaceHolder.push(" _ ");
+      };
+  
+    // assign #word's html to var wordPlaceHolder
+    wordEl.innerHTML = wordPlaceHolder.join("");
+  };
+  
+  function checkForWinOrLoss() {
+    // if movesLeft > 0 && wordPlaceholder = word, diplay win message
+    if (movesLeft > 0 && wordPlaceHolder === word) {
+      wordEl.innerHTML = "You saved the snowman!";
 
-  }
+      // set reset button to visible =>  replayButton.style.visibility = "visible";
+      replayButton.style.visibilty = "visible";
+    }
 
-  function checkForWinOrLoss () {
+    // if movesLeft = 0, display loss message
+    if (movesLeft === 0) {
+      wordEl.innerHTML = "The snowman melted!";
 
-  }
+      // set reset button to visible =>  replayButton.style.visibility = "visible";
+      replayButton.style.visibilty = "visible";
+    }
+  };
