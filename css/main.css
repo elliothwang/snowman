@@ -49,10 +49,11 @@ header {
 }
 
 #word {
-    font-size: 7vmin;
+    font-size: 5vmin;
+    text-align: center;
     font-family: 'Akaya Telivigala', cursive;
     letter-spacing: 2.5vmin;
-    margin: -4vmin 0 4vmin 0;
+    margin: -3vmin 0 3vmin 0;
 }
 
 #alphabet-board > * {

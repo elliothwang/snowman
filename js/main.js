@@ -44,11 +44,7 @@ let images = {
 };
 
   // ===== app's state ===== //
-  let word, wordPlaceHolder, winner, movesLeft;
-
-  // initialize var guesses to empty array
-  let guesses = [];
-
+  let word, wordPlaceHolder, guesses, winner, movesLeft;
 
   // ===== cached element references ===== //
   let snowmanImg = document.querySelector("#img");
@@ -61,9 +57,9 @@ let images = {
   replayButton.addEventListener("click", init);
   keyboard.forEach(div => div.addEventListener("click", handleClick));
 
-  init ();
-  
   // ===== functions ===== //
+  init ();
+
   function init () {
     // reassign winner to null;
     winner = null;
@@ -80,8 +76,15 @@ let images = {
     // reset guesses array
     guesses = [];
 
-    // set replayButton's visibility to hidden
-    replayButton.style.visibility = "hidden";
+    // reset keyboard
+    keyboard.forEach(div => {
+      div.disabled = false;
+      div.style.cursor = "cursor";
+      div.style.pointerEvents = "auto";
+      div.style.backgroundColor = "slategray";
+    });
+    // set replayButton's display to none
+    replayButton.style.display = "none";
 
     // invoke selectWord function
     selectWord();
@@ -148,19 +151,32 @@ let images = {
   function checkForWinOrLoss() {
     // if movesLeft > 0 && wordPlaceholder = word, diplay win message
     if (movesLeft > 0 && wordEl.innerHTML === word) {
-    
-      wordEl.innerHTML = "You saved the snowman!";
-
-      // set reset button to visible =>  replayButton.style.visibility = "visible";
-      replayButton.style.visibilty = "visible";
+      wordEl.innerHTML = "Congratulations! You saved the snowman!";
+      // disable rest of the buttons
+      keyboard.forEach(div => {
+        div.disabled = true;
+        div.style.transform = "none";
+        div.style.cursor = "default";
+        div.style.pointerEvents = "none";
+      });
+      // set reset button's display to block;
+      replayButton.style.display = "block";
     }
-    // if movesLeft = 0, display loss message
+    
+    // if movesLeft = 0, display loss message & word
     if (movesLeft === 0) {
       // hard code image to show last image;
       snowmanImg.style.backgroundImage = images[movesLeft];
-
-      wordEl.innerHTML = "The snowman melted!";
-      // set reset button to visible =>  replayButton.style.visibility = "visible";
-      replayButton.style.visibilty = "visible";
+      wordEl.innerHTML = `The snowman melted!
+      The word was ${word}.`
+      // disable rest of the buttons
+      keyboard.forEach(div => {
+        div.disabled = true;
+        div.style.transform = "none";
+        div.style.cursor = "default";
+        div.style.pointerEvents = "none";
+      });
+      // set reset button's display to block;
+      replayButton.style.display = "block";
     }
   };
