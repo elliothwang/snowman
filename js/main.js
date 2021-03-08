@@ -72,6 +72,7 @@ let images = {
 
     // reassign word to empty string
     word = "";
+    wordEl.style.letterSpacing = "3vmin";
 
     // reset guesses array
     guesses = [];
@@ -81,7 +82,9 @@ let images = {
       div.disabled = false;
       div.style.cursor = "cursor";
       div.style.pointerEvents = "auto";
+      div.style.color = "black";
       div.style.backgroundColor = "slategray";
+      div.style.opacity = 1;
     });
     // set replayButton's display to none
     replayButton.style.display = "none";
@@ -125,8 +128,8 @@ let images = {
 
       // disable evt.target.id's button, disable transform & cursor
       document.getElementById(evt.target.id).disabled = true;
-      document.getElementById(evt.target.id).style.transform = "none";
-      document.getElementById(evt.target.id).style.cursor = "default";
+      // document.getElementById(evt.target.id).style.transform = "none";
+      // document.getElementById(evt.target.id).style.cursor = "default";
       document.getElementById(evt.target.id).style.color = "black";
 
     // invoke CheckForWinOrLoss function
@@ -151,13 +154,14 @@ let images = {
   function checkForWinOrLoss() {
     // if movesLeft > 0 && wordPlaceholder = word, diplay win message
     if (movesLeft > 0 && wordEl.innerHTML === word) {
+      wordEl.style.letterSpacing = "1vmin";
       wordEl.innerHTML = "Congratulations! You saved the snowman!";
       // disable rest of the buttons
       keyboard.forEach(div => {
         div.disabled = true;
-        div.style.transform = "none";
-        div.style.cursor = "default";
-        div.style.pointerEvents = "none";
+        // div.style.transform = "none";
+        // div.style.cursor = "default";
+        // div.style.pointerEvents = "none";
       });
       // set reset button's display to block;
       replayButton.style.display = "block";
@@ -167,14 +171,15 @@ let images = {
     if (movesLeft === 0) {
       // hard code image to show last image;
       snowmanImg.style.backgroundImage = images[movesLeft];
+      wordEl.style.letterSpacing = "1vmin";
       wordEl.innerHTML = `The snowman melted!
       The word was ${word}.`
       // disable rest of the buttons
       keyboard.forEach(div => {
         div.disabled = true;
-        div.style.transform = "none";
-        div.style.cursor = "default";
-        div.style.pointerEvents = "none";
+        // div.style.transform = "none";
+        // div.style.cursor = "default";
+        // div.style.pointerEvents = "none";
       });
       // set reset button's display to block;
       replayButton.style.display = "block";
