@@ -2,8 +2,17 @@
     box-sizing: border-box;
 }
 
+/* video {
+    object-fit: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+  } */
+
 body {
-    /* background: url("https://ak.picdn.net/shutterstock/videos/20770177/thumb/1.jpg") */
+    background: url("https://www.hackingwithswift.com/uploads/articles/snow-2.png");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -13,16 +22,24 @@ body {
 }
 
 header {
-    font-size: 8vmin;
+    font-size: 10vmin;
+    font-family: 'Fascinate', cursive;
     letter-spacing: 1vmin;
+    position: relative;
+    color: #7bdde0;
 }
 
 #moves {
-    font-size: 2vmin;
+    font-size: 2.5vmin;
+    font-family: 'Akaya Telivigala', cursive;
+    color: #cce5e6;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1vmin;
 }
 
 #img {
-    background: url("https://www.wilsoninfo.com/christmas-clipart/2020-snowman-dressed-for-Christmas.jpg");
     background-size: cover;
     background-position: center;
     border: 0.3vmin solid black;
@@ -31,10 +48,9 @@ header {
 }
 
 #word {
-    font-size: 8vmin;
-
-    letter-spacing: 5vmin;
-    margin-bottom: 0.5vmin;
+    font-size: 7vmin;
+    letter-spacing: 2.5vmin;
+    margin: -4vmin 0 4vmin 0;
 }
 
 #reset {
@@ -46,8 +62,20 @@ header {
 }
 
 #alphabet-board > * {
-    justify-content: center;
-    align-items: center;
-    margin: 3vmin;
-    /* background-color: red; */
+    font-size: 3vmin;
+    font-family: 'Akaya Telivigala', cursive;
+    height: 5vmin;
+    width: 5vmin;
+    margin: 2vmin;
+    background-color: slategray;
+    border: 1;
+    border-radius: 50%;
+}
+
+#alphabet-board > *:hover {
+    transform: scale(0.7);
+    transition: all 0.1 ease-in;
+    cursor: pointer;
+    background-color: white;
+    color: slategray;
 }

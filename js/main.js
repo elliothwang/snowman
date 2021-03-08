@@ -103,8 +103,8 @@ let images = {
     if (word.indexOf(evt.target.id) >= 0) {
       console.log("yes!");
       
-      // // set background color of evt.target.id's button to red
-      // document.getElementById(evt.target.id).style.backgroundColor = "green";
+      // set background color of evt.target.id's button to red
+      document.getElementById(evt.target.id).style.backgroundColor = "#1db36d";
 
       // invoke render function
       render();
@@ -114,7 +114,8 @@ let images = {
         console.log("no!")
 
       // set background color of evt.target.id's button to red
-      // document.getElementById(evt.target.id).style.backgroundColor = "green";
+      document.getElementById(evt.target.id).style.backgroundColor = "#bd4844";
+      document.getElementById(evt.target.id).style.opacity = 0.8;
 
         // decrement movesLeft
         movesLeft--;
@@ -128,8 +129,11 @@ let images = {
     if (guesses.indexOf(evt.target.id) === -1) {
       guesses.push(evt.target.id);
     }
-      // disable evt.target.id's button
+      // disable evt.target.id's button, disable transform & cursor
       document.getElementById(evt.target.id).disabled = true;
+      document.getElementById(evt.target.id).style.transform = "none";
+      document.getElementById(evt.target.id).style.cursor = "default";
+      document.getElementById(evt.target.id).style.color = "black";
 
     // invoke CheckForWinOrLoss function
     checkForWinOrLoss();
