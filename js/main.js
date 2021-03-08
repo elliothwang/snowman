@@ -34,12 +34,12 @@ let gameWords = ['abruptly','absurd','abyss','affix','askew','avenue','awkward',
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 // intialize images to object; keys(movesLeft) : images(stages) of snowman 
 let images = {
-    0: "url('https://i.imgur.com/IVaUGst.jpeg'')",
+    0: "url('https://i.imgur.com/IVaUGst.jpeg')",
     1: "url('https://i.imgur.com/UYOFO07.jpg')",
     2: "url('https://i.imgur.com/GNeBV30.jpg')",
     3: "url('https://i.imgur.com/dWCp9Qs.jpg')",
     4: "url('https://i.imgur.com/8euS3ET.jpeg')",
-    4: "url('https://i.imgur.com/mHif41O.jpg')",
+    5: "url('https://i.imgur.com/mHif41O.jpg')",
     6: "url('https://i.imgur.com/5hJUAwf.jpg')"
 };
 
@@ -72,7 +72,7 @@ let images = {
 
     // reassign word to empty string
     word = "";
-    wordEl.style.letterSpacing = "3vmin";
+    wordEl.style.letterSpacing = "2.5vmin";
 
     // reset guesses array
     guesses = [];
@@ -81,7 +81,7 @@ let images = {
     keyboard.forEach(div => {
       div.disabled = false;
       div.style.cursor = "cursor";
-      div.style.pointerEvents = "auto";
+      // div.style.pointerEvents = "auto";
       div.style.color = "black";
       div.style.backgroundColor = "slategray";
       div.style.opacity = 1;
