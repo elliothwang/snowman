@@ -27,6 +27,7 @@ header {
     letter-spacing: 1vmin;
     position: relative;
     color: #7bdde0;
+    margin-top: -2vmin;
 }
 
 #moves {
@@ -36,7 +37,7 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 1vmin;
+    padding: 2vmin;
 }
 
 #img {
@@ -44,12 +45,12 @@ header {
     background-position: center;
     height: 50vmin;
     width: 30vmin;
-    margin: 4vmin;
+    margin: 1vmin 0 4vmin 0;
     border: 0.1vmin solid black;
 }
 
 #word {
-    font-size: 5.5vmin;
+    font-size: 6vmin;
     text-align: center;
     font-family: 'Akaya Telivigala', cursive;
     letter-spacing: 2.5vmin;
@@ -81,12 +82,15 @@ header {
 }
 
 #reset {
-    font-size: 1.5vmin;
+    font-size: 2vmin;
     font-family: 'Fascinate', cursive;
-    padding: 0.5vmin 4vmin 0.5vmin 4vmin;
-    margin: 3vmin 0 0 0;
     background-color: bisque;
     border-color: 0.2vmin solid bisque;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2vmin;
+    padding: 1vmin 3vmin 1vmin 3vmin;
 }
 
 #reset:hover {
