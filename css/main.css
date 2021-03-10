@@ -100,3 +100,12 @@ header {
     cursor: pointer;
     background-color: white;
 }
+
+@media (max-width: 600px) {
+    body {
+        height: 100vh;
+        background: url("https://www.hackingwithswift.com/uploads/articles/snow-2.png");
+        background-size: cover;
+        background-position: center;
+    }
+}
