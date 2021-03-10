@@ -19,7 +19,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
 header {
@@ -100,3 +99,10 @@ header {
     cursor: pointer;
     background-color: white;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    body {
+        width: 100%;
+        height: auto;
+    }
+  }
