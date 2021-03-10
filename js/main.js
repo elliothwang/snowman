@@ -34,13 +34,13 @@ let gameWords = ['abruptly','absurd','abyss','affix','askew','avenue','awkward',
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
 // intialize images to object; keys(movesLeft) : images(stages) of snowman 
 let images = {
-    0: "url('https://i.imgur.com/IVaUGst.jpeg')",
-    1: "url('https://i.imgur.com/UYOFO07.jpg')",
-    2: "url('https://i.imgur.com/GNeBV30.jpg')",
-    3: "url('https://i.imgur.com/dWCp9Qs.jpg')",
-    4: "url('https://i.imgur.com/8euS3ET.jpeg')",
-    5: "url('https://i.imgur.com/mHif41O.jpg')",
-    6: "url('https://i.imgur.com/5hJUAwf.jpg')"
+    0: "url('https://i.imgur.com/5UsmBmS.jpg')",
+    1: "url('https://i.imgur.com/pLxH4rd.jpg')",
+    2: "url('https://i.imgur.com/c1qOULP.jpg')",
+    3: "url('https://i.imgur.com/EX9DTLA.jpg')",
+    4: "url('https://i.imgur.com/2KLX25E.jpeg')",
+    5: "url('https://i.imgur.com/mxCmlut.jpg')",
+    6: "url('https://i.imgur.com/ANYknjN.jpg')"
 };
 
   // ===== app's state ===== //

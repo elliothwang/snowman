@@ -19,6 +19,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 header {
@@ -46,7 +47,8 @@ header {
     height: 50vmin;
     width: 30vmin;
     margin: 1vmin 0 4vmin 0;
-    border: 0.1vmin solid black;
+    mix-blend-mode: multiply;
+
 }
 
 #word {
