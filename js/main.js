@@ -65,7 +65,7 @@ let images = {
     winner = null;
     // reassign amount of moves left to & display movesLeft
     movesLeft = 6;
-    movesLeftEl.innerText = `Moves Left: ${movesLeft}`;
+    movesLeftEl.innerText = "stop cheating 찐씨";
 
     // // reset snowman picture to first stage => snowmanImg.style.backgroundImage = images.0;
     snowmanImg.style.backgroundImage = images[movesLeft];

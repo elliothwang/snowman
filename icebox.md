@@ -1,6 +1,2 @@
-fix image's background
-
-fix mobile view
-
-fix hover functionality
+fix mobile' keyboard
 add video to background
