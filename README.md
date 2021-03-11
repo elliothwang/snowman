@@ -2,15 +2,16 @@
 
 <!-- A README.md file with these sections: -->
 
-☐ <Your game's title>: A description of your game. Background info of the game is a nice touch.
+☐ <Your game's title>: Snowman. 6 chances to guess every letter of the given word. If all letters within the word are guessed correctly, the snowman is saved from completely melting. If the word is not guessed within 6 letter selections, the snowman will melt.
 
 ☐ Screenshot(s): Images of your actual game.
 
-☐ Technologies Used: List of the technologies used, e.g., JavaScript, HTML, CSS...
+☐ Technologies Used: JavaScript, HTML, CSS
 
 ☐ Getting Started: In this section include the link to your deployed game and any instructions you deem important.
 
-☐ Next Steps: Planned future enhancements (icebox items).
+☐ Next Steps: Add a slow snowfall video background.
+
 
 <!-- Note: Don't underestimate the value of a well crafted README.md. The README.md introduces your project to prospective employers and forms their first impression of your work! -->
 

@@ -1,32 +1,3 @@
-// ===== Guess the Word Game ===== //
-
-
-// ===== RULES ===== //
-// 1. Select amount of letters in word from 6-10.
-// 2. If the selected letter is contained in the word, the player takes another turn guessing a letter.
-// 3. If the selected letter is not contained in the word, a portion of the snowman will be deleted. 
-// 4. The game continues until:
-  // the word is guessed (all letters are revealed) – WINNER or,
-  // all the parts of the snowman are deleted – LOSE
-
-// ===== GAME FLOW =====
-  // After selecting game mode, page will load:
-    // upper 10%: title & message
-    // upper 40% of page will be snowman
-      // middle 20% of page will be empty word with blank lines under each "hidden" letter
-        // lower 25% of alphabet & on the side of alphabet box; used-letters box
-        // last 5% replay button
-  
-  // player selects letter:
-    // if hit, move letter to used-letters box
-      // check for win
-      // select letter again
-    // if miss, move letter to used-letters box
-      // remove portion of snowman
-      // remove 1 from # of moves
-      // select letter again
-
-
 // ===== constants ===== //
 // intialize gameWords to array of difficult spaceman words
 let gameWords = ['abruptly','absurd','abyss','affix','askew','avenue','awkward','axiom','azure','bagpipes','bandwagon','banjo','bayou','beekeeper','bikini','blitz','blizzard','boggle','bookworm','boxcar','boxful','buckaroo','buffalo','buffoon','buxom','buzzard','buzzing','buzzwords','caliph','cobweb','cockiness','croquet','crypt','curacao','cycle','daiquiri','dirndl','disavow','dizzying','duplex','dwarves','embezzle','equip','espionage','euouae','exodus','faking','fishhook','fixable','fjord','flapjack','flopping','fluffiness','flyby','foxglove','frazzled','frizzled','fuchsia','funny','gabby','galaxy','galvanize','gazebo','giaour','gizmo','glowworm','glyph','gnarly','gnostic','gossip','grogginess','haiku','haphazard','hyphen','iatrogenic','icebox','injury','ivory','ivy','jackpot','jaundice','jawbreaker','jaywalk','jazziest','jazzy','jelly','jigsaw','jinx','jiujitsu','jockey','jogging','joking','jovial','joyful','juicy','jukebox','jumbo','kayak','kazoo','keyhole','khaki','kilobyte','kiosk','kitsch','kiwifruit','klutz','knapsack','larynx','lengths','lucky','luxury','lymph','marquis','matrix','megahertz','microwave','mnemonic','mystify','naphtha','nightclub','nowadays','numbskull','nymph','onyx','ovary','oxidize','oxygen','pajama','peekaboo','phlegm','pixel','pizazz','pneumonia','polka','pshaw','psyche','puppy','puzzling','quartz','queue','quips','quixotic','quiz','quizzes','quorum','razzmatazz','rhubarb','rhythm','rickshaw','schnapps','scratch','shiv','snazzy','sphinx','spritz','squawk','staff','strength','strengths','stretch','stronghold','stymied','subway','swivel','syndrome','thriftless','thumbscrew','topaz','transcript','transgress','transplant','triphthong','twelfth','twelfths','unknown','unworthy','unzip','uptown','vaporize','vixen','vodka','voodoo','vortex','voyeurism','walkway','waltz','wave','wavy','waxy','wellspring','wheezy','whiskey','whizzing','whomever','wimpy','witchcraft','wizard','woozy','wristwatch','wyvern','xylophone','yachtsman','yippee','yoked','youthful','yummy','zephyr','zigzag','zigzagging','zilch','zipper','zodiac','zombie'];
@@ -81,7 +52,6 @@ let images = {
     keyboard.forEach(div => {
       div.disabled = false;
       div.style.cursor = "cursor";
-      // div.style.pointerEvents = "auto";
       div.style.color = "black";
       div.style.backgroundColor = "slategray";
       div.style.opacity = 1;
@@ -128,8 +98,7 @@ let images = {
 
       // disable evt.target.id's button, disable transform & cursor
       document.getElementById(evt.target.id).disabled = true;
-      // document.getElementById(evt.target.id).style.transform = "none";
-      // document.getElementById(evt.target.id).style.cursor = "default";
+
       document.getElementById(evt.target.id).style.color = "black";
 
     // invoke CheckForWinOrLoss function
@@ -159,11 +128,8 @@ let images = {
       // disable rest of the buttons
       keyboard.forEach(div => {
         div.disabled = true;
-        // div.style.transform = "none";
-        // div.style.cursor = "default";
-        // div.style.pointerEvents = "none";
       });
-      // set reset button's display to block;
+      // reset button's display to block;
       replayButton.style.display = "block";
     }
     
@@ -177,9 +143,6 @@ let images = {
       // disable rest of the buttons
       keyboard.forEach(div => {
         div.disabled = true;
-        // div.style.transform = "none";
-        // div.style.cursor = "default";
-        // div.style.pointerEvents = "none";
       });
       // set reset button's display to block;
       replayButton.style.display = "block";
