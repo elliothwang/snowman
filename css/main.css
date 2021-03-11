@@ -35,10 +35,9 @@ header {
     background-size: cover;
     background-position: center;
     height: 50vmin;
-    width: 30vmin;
-    margin: 1vmin 0 4vmin 0;
+    width: 35vmin;
+    margin: -2.5vmin 0 2vmin 0;
     mix-blend-mode: multiply;
-
 }
 
 #word {
