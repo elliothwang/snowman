@@ -2,15 +2,6 @@
     box-sizing: border-box;
 }
 
-/* video {
-    object-fit: cover;
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-  } */
-
 body {
     background: url("https://www.hackingwithswift.com/uploads/articles/snow-2.png");
     background-size: cover;
@@ -76,10 +67,6 @@ header {
 
 #alphabet-board > *:hover {
     cursor: pointer;
-    /* transform: scale(0.7);
-    transition: all 0.1 ease-in;
-    background-color: white;
-    color: slategray; */
 }
 
 #reset {

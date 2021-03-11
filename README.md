@@ -2,18 +2,19 @@
 
 <!-- A README.md file with these sections: -->
 
-☐ <Your game's title>: Snowman. 6 chances to guess every letter of the given word. If all letters within the word are guessed correctly, the snowman is saved from completely melting. If the word is not guessed within 6 letter selections, the snowman will melt.
+☐ <Your game's title>: Snowman. 
 
-☐ Screenshot(s): Images of your actual game.
+☐ Screenshot(s): 
+/Users/elliothwang/code/snowman/Snowman_Screenshot_1.png
+/Users/elliothwang/code/snowman/Snowman_Screenshot_2.png
 
 ☐ Technologies Used: JavaScript, HTML, CSS
 
-☐ Getting Started: In this section include the link to your deployed game and any instructions you deem important.
+☐ Getting Started: https://elliothwang.github.io/snowman/
+Upon the page loading, a word is randomly selected & the game begins. There are no hints & the possible words are not categorized categorically. The only commonality between all the possible words is that they're extremely difficult words thus making this version of "Spaceman" extremely difficult. The player has 6 chances to guess every letter of the given word. If all letters within the word are guessed correctly, the snowman is saved from completely melting. If the word is not guessed within 6 letter selections, the snowman will melt. Select any letter to being guessing. Good luck!
 
 ☐ Next Steps: Add a slow snowfall video background.
 
-
-<!-- Note: Don't underestimate the value of a well crafted README.md. The README.md introduces your project to prospective employers and forms their first impression of your work! -->
 
 <!-- Presentation - Next Friday: -->
 You will have a maximum of 10 minutes to present your project following these guidelines:
