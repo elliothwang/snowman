@@ -5,8 +5,8 @@
 ☐ <Your game's title>: Snowman. 
 
 ☐ Screenshot(s): 
-/Users/elliothwang/code/snowman/Snowman_Screenshot_1.png
-/Users/elliothwang/code/snowman/Snowman_Screenshot_2.png
+Screen Shot 2021-03-11 at 11.15.30 AM
+
 
 ☐ Technologies Used: JavaScript, HTML, CSS, jQuery, bootstrap
 
