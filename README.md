@@ -5,9 +5,8 @@
 ☐ <Your game's title>: Snowman. 
 
 ☐ Screenshot(s): 
-![](Snowman_Screenshot_1)
-![](Snowman_Screenshot_2)
-
+Screen Shot 2021-03-11 at 11.15.30 AM![image](https://user-images.githubusercontent.com/68434880/110996408-bd263a00-8330-11eb-87a4-a91eb2a7955a.png)
+Screen Shot 2021-03-12 at 12.41.21 PM![image](https://user-images.githubusercontent.com/68434880/110996428-c7483880-8330-11eb-85b3-2c6e13db3e1c.png)
 
 ☐ Technologies Used: JavaScript, HTML, CSS, jQuery, bootstrap
 
