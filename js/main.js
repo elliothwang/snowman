@@ -69,7 +69,6 @@ let images = {
   function selectWord() {
     // randomly select element from gameWords Array & assign it to wordEl.innerText
     word = gameWords[Math.floor(Math.random() * gameWords.length)];
-    console.log(word);
   };
   
   function handleClick(evt) {
